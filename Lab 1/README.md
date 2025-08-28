@@ -72,10 +72,6 @@ _Goals:_ What are the goals of each player? (e.g., jumping to a tree, opening th
 
 The interactive device can be anything *except* a computer, a tablet computer or a smart phone, but the main way it interacts needs to be using light.
 
-\*\***Describe your setting, players, activity and goals here.**\*\*
-
-Storyboards are a tool for visually exploring a users interaction with a device. They are a fast and cheap method to understand user flow, and iterate on a design before attempting to build on it. Take some time to read through this explanation of [storyboarding in UX design](https://www.smashingmagazine.com/2017/10/storyboarding-ux-design/). Sketch seven storyboards of the interactions you are planning. **It does not need to be perfect**, but must get across the behavior of the interactive device and the other characters in the scene. 
-
 1) **Long-distance lightboard**
    
    **Setting**: The device is set up on the wall of a common area of the home you see often, e.g. bedroom, kitchen.
@@ -98,7 +94,7 @@ Storyboards are a tool for visually exploring a users interaction with a device.
 
 3) **Mirror Me!**
    
-   **Setting**: The device is in or mounted on the player's mirror.
+   **Setting**: In the player's bedroom
    
    **Players**: One (indecisive) person
    
@@ -106,7 +102,7 @@ Storyboards are a tool for visually exploring a users interaction with a device.
    
    **Goals**: To promote creativity in designing new outfits, create ease on busy mornings, and sustainability (using what the player already has in their closet).
 
-1) **Clean-Up Mouse**
+4) **Clean-Up Mouse**
    
    **Setting**: The device is on the ground of a home area.
    
@@ -116,12 +112,31 @@ Storyboards are a tool for visually exploring a users interaction with a device.
    
    **Goals**: To keep the player's house clean!
 
+Storyboards are a tool for visually exploring a users interaction with a device. They are a fast and cheap method to understand user flow, and iterate on a design before attempting to build on it. Take some time to read through this explanation of [storyboarding in UX design](https://www.smashingmagazine.com/2017/10/storyboarding-ux-design/). Sketch seven storyboards of the interactions you are planning. **It does not need to be perfect**, but must get across the behavior of the interactive device and the other characters in the scene. 
+
 
 \*\***Include pictures of your storyboards here**\*\*
 
 Present your ideas to the other people in your breakout room (or in small groups). You can just get feedback from one another or you can work together on the other parts of the lab.
 
-\*\***Summarize feedback you got here.**\*\*
+1) Long distance light-board
+- What kind of light board will this use?
+- Is it a pain to manually configure all the lights on the light board?
+- What level of precision will the user have in terms of writing words or drawing?
+
+2) FridgeChef
+- Can this be replaced by an app?
+- If you have a smart fridge, this has no purpose because you can just install an app on the fridge.
+
+3) MirrorMe
+- Do you need WiFi and software to connect to this to perform the outfit recommendation?
+- Will user set up in the room be difficult if we're projecting the GUI onto the mirror and looking at the user with a camera on the mirror?
+- It should take not only your calendar into account but also the weather and time of year!
+
+4) Clean-up mouse
+- Does it look like an actual mouse? (No)
+- How does it differentiate between things on the ground you meant to keep there versus things that should be there?
+- What is the behavior if you ignore the device? 
 
 
 ## Part B. Act out the Interaction
