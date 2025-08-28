@@ -76,6 +76,47 @@ The interactive device can be anything *except* a computer, a tablet computer or
 
 Storyboards are a tool for visually exploring a users interaction with a device. They are a fast and cheap method to understand user flow, and iterate on a design before attempting to build on it. Take some time to read through this explanation of [storyboarding in UX design](https://www.smashingmagazine.com/2017/10/storyboarding-ux-design/). Sketch seven storyboards of the interactions you are planning. **It does not need to be perfect**, but must get across the behavior of the interactive device and the other characters in the scene. 
 
+1) **Long-distance lightboard**
+   
+   **Setting**: The device is set up on the wall of a common area of the home you see often, e.g. bedroom, kitchen.
+   
+   **Players**: Two people in a long-distance relationship.
+   
+   **Activity**: Given a board with a lot of glowing buttons that are colored lights, a player can configure a message/drawing on the board and hit send. The second player will        have a matching set-up which will display their message.
+   
+   **Goals**: To connect over long distances and also generate interesting art for your wall.
+
+2) **FridgeChef**
+   
+   **Setting**: The device is set up on your fridge, like a magnet with a display.
+   
+   **Players**: One (hungry) person
+   
+   **Activity**: The device will monitor what is in the player's fridge. When prompted, it will describe what they have in their fridge, what has gone bad or is still usable, or what they can make given the ingredients in the fridge. 
+   
+   **Goals**: To make the process of organizing and cooking more streamlined and frictionless. 
+
+3) **Mirror Me!**
+   
+   **Setting**: The device is in or mounted on the player's mirror.
+   
+   **Players**: One (indecisive) person
+   
+   **Activity**: In the morning, when the player stands in front of the mirror, it will visually display options for outfits (depending on weather) and overlay them on the player's physical form. The user will have a touch-screen display to cycle through options for clothing as well. Think of it as a higher tech version of Cher's mirror from _Clueless_. It will also learn from other outfits you have shown to the screen.
+   
+   **Goals**: To promote creativity in designing new outfits, create ease on busy mornings, and sustainability (using what the player already has in their closet).
+
+1) **Clean-Up Mouse**
+   
+   **Setting**: The device is on the ground of a home area.
+   
+   **Players**: One (messy) person
+   
+   **Activity**: When there is an item on the floor that is not supposed to be on the ground (boxes, clothes, purses), the device (that looks like a mouse) will roll up to the item, squeak, and light up. This will remind the player to clean up the item.
+   
+   **Goals**: To keep the player's house clean!
+
+
 \*\***Include pictures of your storyboards here**\*\*
 
 Present your ideas to the other people in your breakout room (or in small groups). You can just get feedback from one another or you can work together on the other parts of the lab.
