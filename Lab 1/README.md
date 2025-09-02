@@ -2,7 +2,8 @@
 
 # Staging Interaction
 
-\*\***Feedback Collaborators: Amanda Lu, Ying Yu Chen, Shreya Kethireddy**\*\*
+\*\***General collaborator: Shreya Kethireddy**\*\*
+\*\***Feedback given by: Amanda Lu, Ying Yu Chen, Shreya Kethireddy**\*\*
 
 In the original stage production of Peter Pan, Tinker Bell was represented by a darting light created by a small handheld mirror off-stage, reflecting a little circle of light from a powerful lamp. Tinkerbell communicates her presence through this light to the other characters. See more info [here](https://en.wikipedia.org/wiki/Tinker_Bell). 
 
@@ -123,7 +124,7 @@ Storyboards are a tool for visually exploring a users interaction with a device.
 Present your ideas to the other people in your breakout room (or in small groups). You can just get feedback from one another or you can work together on the other parts of the lab.
 
 **Feedback**
-1) Long distance light-board
+1) Long-distance light board
 - What kind of light board will this use?
 - Is it a pain to manually configure all the lights on the light board?
 - What level of precision will the user have in terms of writing words or drawing?
@@ -148,8 +149,10 @@ Present your ideas to the other people in your breakout room (or in small groups
 Try physically acting out the interaction you planned. For now, you can just pretend the device is doing the things you’ve scripted for it. 
 
 \*\***Are there things that seemed better on paper than acted out?**\*\*
+For the long-distance light board, we realized it might take time to click and light up the individual lights that create the cohesive "image." Additionally, we realized that the clean-up mouse might be a challenge to handle in the middle of the night if the alarm goes off or during pivotal moments.
 
 \*\***Are there new ideas that occur to you or your collaborator that come up from the acting?**\*\*
+In terms of the behavior of the clean-up mouse, we thought it might be interesting for the mouse to physically run around the messy object in question for couple seconds, adding to the general playfulness. If we ignore the clean-up mouse, we also thought it could be prudent for it to give up after a set period of time (and for it to be deactivated during the night).
 
 
 ## Part C. Prototype the device
