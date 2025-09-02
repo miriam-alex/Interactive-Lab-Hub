@@ -149,9 +149,11 @@ Present your ideas to the other people in your breakout room (or in small groups
 Try physically acting out the interaction you planned. For now, you can just pretend the device is doing the things you’ve scripted for it. 
 
 \*\***Are there things that seemed better on paper than acted out?**\*\*
+
 For the long-distance light board, we realized it might take time to click and light up the individual lights that create the cohesive "image." Additionally, we realized that the clean-up mouse might be a challenge to handle in the middle of the night if the alarm goes off or during pivotal moments.
 
 \*\***Are there new ideas that occur to you or your collaborator that come up from the acting?**\*\*
+
 In terms of the behavior of the clean-up mouse, we thought it might be interesting for the mouse to physically run around the messy object in question for couple seconds, adding to the general playfulness. If we ignore the clean-up mouse, we also thought it could be prudent for it to give up after a set period of time (and for it to be deactivated during the night).
 
 
