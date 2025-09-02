@@ -2,8 +2,9 @@
 
 # Staging Interaction
 
-\*\***General collaborator: Shreya Kethireddy**\*\*
-\*\***Feedback given by: Amanda Lu, Ying Yu Chen, Shreya Kethireddy**\*\*
+**General collaborator: Shreya Kethireddy**
+
+**Feedback given by: Amanda Lu, Ying Yu Chen, Shreya Kethireddy**
 
 In the original stage production of Peter Pan, Tinker Bell was represented by a darting light created by a small handheld mirror off-stage, reflecting a little circle of light from a powerful lamp. Tinkerbell communicates her presence through this light to the other characters. See more info [here](https://en.wikipedia.org/wiki/Tinker_Bell). 
 
@@ -12,8 +13,6 @@ There is no actor that plays Tinkerbell--her existence in the play comes from th
 For lab this week, we draw on this and other inspirations from theatre to stage interactions with a device where the main mode of display/output for the interactive device you are designing is lighting. You will plot the interaction with a storyboard, and use your computer and a smartphone to experiment with what the interactions will look and feel like. 
 
 _Make sure you read all the instructions and understand the whole of the laboratory activity before starting!_
-
-
 
 ## Prep
 
@@ -73,6 +72,8 @@ _Goals:_ What are the goals of each player? (e.g., jumping to a tree, opening th
 
 The interactive device can be anything *except* a computer, a tablet computer or a smart phone, but the main way it interacts needs to be using light.
 
+### General designs
+
 1) **Long-distance lightboard**
    
    **Setting**: The device is set up on the wall of a common area of the home you see often, e.g. bedroom, kitchen.
@@ -113,6 +114,8 @@ The interactive device can be anything *except* a computer, a tablet computer or
    
    **Goals**: To keep the player's house clean!
 
+### Storyboards
+
 Storyboards are a tool for visually exploring a users interaction with a device. They are a fast and cheap method to understand user flow, and iterate on a design before attempting to build on it. Take some time to read through this explanation of [storyboarding in UX design](https://www.smashingmagazine.com/2017/10/storyboarding-ux-design/). Sketch seven storyboards of the interactions you are planning. **It does not need to be perfect**, but must get across the behavior of the interactive device and the other characters in the scene. 
 
 ![Storyboard for Clean Up Mouse](storyboard-clean-up-mouse.jpeg)
@@ -123,38 +126,35 @@ Storyboards are a tool for visually exploring a users interaction with a device.
 
 Present your ideas to the other people in your breakout room (or in small groups). You can just get feedback from one another or you can work together on the other parts of the lab.
 
-**Feedback**
-1) Long-distance light board
-- What kind of light board will this use?
-- Is it a pain to manually configure all the lights on the light board?
-- What level of precision will the user have in terms of writing words or drawing?
-
-2) FridgeChef
-- Can this be replaced by an app?
-- If you have a smart fridge, this has no purpose because you can just install an app on the fridge.
-
-3) MirrorMe
-- Do you need WiFi and software to connect to this to perform the outfit recommendation?
-- Will user set up in the room be difficult if we're projecting the GUI onto the mirror and looking at the user with a camera on the mirror?
-- It should take not only your calendar into account but also the weather and time of year!
-
-4) Clean-up mouse
-- Does it look like an actual mouse? (No)
-- How does it differentiate between things on the ground you meant to keep there versus things that should be there?
-- What is the behavior if you ignore the device? 
+### Feedback recieved
+- **Long-Distance Light Board**
+   - What kind of light board will this use?
+   - Is it a pain to manually configure all the lights on the light board?
+   - What level of precision will the user have in terms of writing words or drawing?
+- **FridgeChef**
+   - Can this be replaced by an app?
+   - If you have a smart fridge, this has no purpose because you can just install an app on the fridge.
+- **Mirror Me**
+   - Do you need WiFi and software to connect to this to perform the outfit recommendation?
+   - Will user set up in the room be difficult if we're projecting the GUI onto the mirror and looking at the user with a camera on the mirror?
+   - It should take not only your calendar into account but also the weather and time of year!
+- **Clean-up Mouse**
+   - Does it look like an actual mouse? (No)
+   - How does it differentiate between things on the ground you meant to keep there versus things that should be there?
+   - What is the behavior if you ignore the device? 
 
 
 ## Part B. Act out the Interaction
 
 Try physically acting out the interaction you planned. For now, you can just pretend the device is doing the things you’ve scripted for it. 
 
-\*\***Are there things that seemed better on paper than acted out?**\*\*
+**Are there things that seemed better on paper than acted out?**
 
-For the long-distance light board, we realized it might take time to click and light up the individual lights that create the cohesive "image." Additionally, we realized that the clean-up mouse might be a challenge to handle in the middle of the night if the alarm goes off or during pivotal moments.
+> For the long-distance light board, we realized it might take time to click and light up the individual lights that create the cohesive "image." Additionally, we realized that the clean-up mouse might be a challenge to handle in the middle of the night if the alarm goes off or during pivotal moments.
 
-\*\***Are there new ideas that occur to you or your collaborator that come up from the acting?**\*\*
+**Are there new ideas that occur to you or your collaborator that come up from the acting?**
 
-In terms of the behavior of the clean-up mouse, we thought it might be interesting for the mouse to physically run around the messy object in question for couple seconds, adding to the general playfulness. If we ignore the clean-up mouse, we also thought it could be prudent for it to give up after a set period of time (and for it to be deactivated during the night).
+> In terms of the behavior of the clean-up mouse, we thought it might be interesting for the mouse to physically run around the messy object in question for couple seconds, adding to the general playfulness. If we ignore the clean-up mouse, we also thought it could be prudent for it to give up after a set period of time (and for it to be deactivated during the night).
 
 
 ## Part C. Prototype the device
@@ -168,24 +168,20 @@ We invented this tool for this lab!
 If you run into technical issues with this tool, you can also use a light switch, dimmer, etc. that you can can manually or remotely control.
 
 \*\***Give us feedback on Tinkerbelle.**\*\*
-While the repo itself was easy to set up, the application only worked on my laptop and did not appear on my phone until using the WiFi network. This was only resolved when I switched to using my partner's hotspot on her phone. Previously, I was using WhiteSky-Cornell.
+> While the repo itself was easy to set up, the application only appeared to run on my laptop; I recieved a series of errors in my phone's browser (mainly timeout errors) while ensuring I was connected to the correct WiFi network. This was only resolved when I switched to using my partner's hotspot. Previously, I was using WhiteSky-Cornell.
 
 ## Part D. Wizard the device
 Take a little time to set up the wizarding set-up that allows for someone to remotely control the device while someone acts with it. Hint: You can use Zoom to record videos, and you can pin someone’s video feed if that is the scene which you want to record. 
 
-\*\***Include your first attempts at recording the set-up video here.**\*\*
+> The set-up video is linked [here](https://drive.google.com/file/d/1xOM_sTJwLktaxBvsDW7go40Q72Tfv4XW/view?usp=sharing).
 
 Now, change the goal within the same setting, and update the interaction with the paper prototype. 
 
-\*\***Show the follow-up work here.**\*\*
-
-Clean-up mouse: This prototype does not need to be updated; however, it will require some manual pulling on my behalf to simulate the motion.
-
-FridgeChef: Rather than display a menu item, it will instead display green if the food on the shelf can be assembled into a hearty meal and red if this task is impossible.
-
-Long distance light: Rather than drawings being communicated between participants, we will do colors for the sake of this mock. 
-
-Mirror Me: This is a bit difficult to do considering it involves projecting light onto a mirror; for this reason, I will not be shooting a video with this.
+### Design Considerations
+- **Clean-up Mouse**: This prototype does not need to be updated; however, it will require some manual pulling on my behalf to simulate the motion.
+- **FridgeChef**: Rather than display a menu item, it will instead display green if the food on the shelf can be assembled into a hearty meal and red if this task is impossible. This binary reduces the labor associated with creating a responsive screen for the fridge.
+- **Long-Distance Light Board**: Rather than drawings being communicated between participants, we will do colors for the sake of this mock. 
+- **Mirror Me**: This is a bit difficult to do considering it involves projecting light onto a mirror; for this reason, I will not be prototyping this specific idea.
 
 ## Part E. Costume the device
 
@@ -195,20 +191,20 @@ Think about the setting of the device: is the environment a place where the devi
 
 ![Costumes](prototype-sketches.jpeg)
 
-
 ## Part F. Record
 
-\*\***Take a video of your prototyped interaction.**\*\*
+### Prototyped Interactions
+- [FridgeChef](https://drive.google.com/file/d/11RZ8ZuTsB6K6aNrxzS2vJgFb_UXvqe9l/view?usp=sharing)
+- [Clean-up Mouse](https://drive.google.com/file/d/14Fjr9Zw7yz4Niv_f3YPpdMRzDE4vaw_7/view?usp=drive_link)
 
-\*\***Please indicate who you collaborated with on this Lab.**\*\*
-Be generous in acknowledging their contributions! And also recognizing any other influences (e.g. from YouTube, Github, Twitter) that informed your design. 
+### Collaborators
+_Be generous in acknowledging their contributions! And also recognizing any other influences (e.g. from YouTube, Github, Twitter) that informed your design._
 
-
+When coming up with ideas, I worked with Amanda Lu, Ying Yu Chen, and Shreya Kethireddy to (a) narrow down my set of original ideas into my top 5, (b) consult about design decisions on my storyboards, and (c) recieve feedback on my ideas and storyboards once they were completed. Later, I worked with Shreya Kethireddy to prototype and film my videos (as I was away for the weekend and could not collaborate with the other members of the team).
 
 # Staging Interaction, Part 2 
 
 This describes the second week's work for this lab activity.
-
 
 ## Prep (to be done before Lab on Wednesday)
 
