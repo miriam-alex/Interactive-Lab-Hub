@@ -168,17 +168,19 @@ We invented this tool for this lab!
 If you run into technical issues with this tool, you can also use a light switch, dimmer, etc. that you can can manually or remotely control.
 
 \*\***Give us feedback on Tinkerbelle.**\*\*
-
+While the repo itself was easy to set up, the application only worked on my laptop and did not appear on my phone until using the WiFi network. This was only resolved when I switched to using my partner's hotspot on her phone. Previously, I was using WhiteSky-Cornell.
 
 ## Part D. Wizard the device
 Take a little time to set up the wizarding set-up that allows for someone to remotely control the device while someone acts with it. Hint: You can use Zoom to record videos, and you can pin someone’s video feed if that is the scene which you want to record. 
 
 \*\***Include your first attempts at recording the set-up video here.**\*\*
 
-Now, hange the goal within the same setting, and update the interaction with the paper prototype. 
+Now, change the goal within the same setting, and update the interaction with the paper prototype. 
 
 \*\***Show the follow-up work here.**\*\*
-
+Clean-up mouse: This prototype does not need to be updated; however, it will require some manual pulling on my behalf to simulate the motion.
+FridgeChef: Rather than display a menu item, it will instead display green if the food on the shelf can be assembled into a hearty meal and red if this task is impossible.
+Long distance light: Rather than drawings being communicated between participants, we will do colors for the sake of this mock. 
 
 ## Part E. Costume the device
 
