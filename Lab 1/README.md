@@ -178,9 +178,14 @@ Take a little time to set up the wizarding set-up that allows for someone to rem
 Now, change the goal within the same setting, and update the interaction with the paper prototype. 
 
 \*\***Show the follow-up work here.**\*\*
+
 Clean-up mouse: This prototype does not need to be updated; however, it will require some manual pulling on my behalf to simulate the motion.
+
 FridgeChef: Rather than display a menu item, it will instead display green if the food on the shelf can be assembled into a hearty meal and red if this task is impossible.
+
 Long distance light: Rather than drawings being communicated between participants, we will do colors for the sake of this mock. 
+
+Mirror Me: This is a bit difficult to do considering it involves projecting light onto a mirror; for this reason, I will not be shooting a video with this.
 
 ## Part E. Costume the device
 
