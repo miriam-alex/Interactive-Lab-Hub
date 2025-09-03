@@ -124,6 +124,12 @@ Storyboards are a tool for visually exploring a users interaction with a device.
 ![Storyboard for Mirror Me - problem](storyboard-mirror-me-problem.jpeg)
 ![Storyboard for Mirror Me - solution](storyboard-mirror-me-solution.jpeg)
 
+Additional storyboards from my team:
+
+- Primary collaborator: [Shreya Kethireddy](https://github.com/littleredpolkadot/Interactive-Lab-Hub/tree/Fall2025/Lab%201)
+- Secondary collaborator: [Ying Yu Chen](https://github.com/chenyingyu-main/Interactive-Lab-Hub/tree/Fall2025/Lab%201)
+- Secondary collaborator: [Amanda Lu](https://github.com/amandazlu/Interactive-Lab-Hub)
+
 Present your ideas to the other people in your breakout room (or in small groups). You can just get feedback from one another or you can work together on the other parts of the lab.
 
 ### Feedback recieved
@@ -196,6 +202,12 @@ Think about the setting of the device: is the environment a place where the devi
 ### Prototyped Interactions
 - [FridgeChef](https://drive.google.com/file/d/11RZ8ZuTsB6K6aNrxzS2vJgFb_UXvqe9l/view?usp=sharing)
 - [Clean-up Mouse](https://drive.google.com/file/d/14Fjr9Zw7yz4Niv_f3YPpdMRzDE4vaw_7/view?usp=drive_link)
+
+Additional videos from my team
+- [Shreya's morse code detector](https://github.com/littleredpolkadot/Interactive-Lab-Hub/blob/Fall2025/Lab%201/PartF/MorseCodeCommunicator.mp4)
+- [Shreya's odor detector](https://github.com/littleredpolkadot/Interactive-Lab-Hub/blob/Fall2025/Lab%201/PartF/OdorDetector.mp4)
+- [Shreya's task reminder system](https://github.com/littleredpolkadot/Interactive-Lab-Hub/blob/Fall2025/Lab%201/PartF/TaskReminderSystem.mp4)
+
 
 ### Collaborators
 _Be generous in acknowledging their contributions! And also recognizing any other influences (e.g. from YouTube, Github, Twitter) that informed your design._
