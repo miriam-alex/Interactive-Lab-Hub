@@ -118,11 +118,11 @@ The interactive device can be anything *except* a computer, a tablet computer or
 
 Storyboards are a tool for visually exploring a users interaction with a device. They are a fast and cheap method to understand user flow, and iterate on a design before attempting to build on it. Take some time to read through this explanation of [storyboarding in UX design](https://www.smashingmagazine.com/2017/10/storyboarding-ux-design/). Sketch seven storyboards of the interactions you are planning. **It does not need to be perfect**, but must get across the behavior of the interactive device and the other characters in the scene. 
 
-![Storyboard for Clean Up Mouse](storyboard-clean-up-mouse.jpeg)
-![Storyboard for FridgeChef](storyboard-fridge-chef.jpeg)
-![Storyboard for Long Distance Light](storyboard-long-distance-light.jpeg)
-![Storyboard for Mirror Me - problem](storyboard-mirror-me-problem.jpeg)
-![Storyboard for Mirror Me - solution](storyboard-mirror-me-solution.jpeg)
+![Storyboard for Clean Up Mouse](Images/storyboard-clean-up-mouse.jpeg)
+![Storyboard for FridgeChef](Images/storyboard-fridge-chef.jpeg)
+![Storyboard for Long Distance Light](Images/storyboard-long-distance-light.jpeg)
+![Storyboard for Mirror Me - problem](Images/storyboard-mirror-me-problem.jpeg)
+![Storyboard for Mirror Me - solution](Images/storyboard-mirror-me-solution.jpeg)
 
 Additional storyboards from my team:
 
@@ -250,3 +250,8 @@ Restated from above:
    **Goals**: To keep the player's house clean!
 
 ### Storyboards
+![Storyboard for Clean Up Mouse - First Encounter](Images/sb-mouse-first-encounter.png)
+![Storyboard for Clean Up Mouse - Typical Interaction](Images/sb-mouse-typical.png)
+![Storyboard for Clean Up Mouse - Getting Ignored](Images/sb-mouse-ignored.png)
+![Storyboard for Clean Up Mouse - Sleep Mode](Images/sb-mouse-dnd.png)
+![Storyboard for Clean Up Mouse - Team Clean Up](Images/sb-mouse-team-mode.png)
