@@ -222,7 +222,9 @@ This describes the second week's work for this lab activity.
 
 You will be assigned three partners from other groups. Go to their github pages, view their videos, and provide them with reactions, suggestions & feedback: explain to them what you saw happening in their video. Guess the scene and the goals of the character. Ask them about anything that wasn’t clear. 
 
-\*\***Summarize feedback from your partners here.**\*\*
+\*\***Feedback**\*\*
+- One reviewer mentioned that light not be essential to the mechanism of one of my ideas; they did not specify which device. That being said, they were not able to view some of my videos for the lab (other reviewers were) so they could not give any specific feedback for 2 categories.
+- One of the reviewers that many of the designs had already been explored in the IoT space. Additionally, they mentioned that we had 3 different devices rather than three costumes for a single device; however, this piece of feedback may be because we had alternative interpretations of the assignment itself.
 
 ## Make it your own
 
@@ -232,3 +234,19 @@ Do last week’s assignment again, but this time:
 3) We will be grading with an emphasis on creativity. 
 
 \*\***Document everything here. (Particularly, we would like to see the storyboard and video, although photos of the prototype are also great.)**\*\*
+
+In this iteration of the design, I wanted to focus on a deep dive on the clean-up mouse idea. Specifically, I want to prototype the many interactions that the clean-up mouse could have with its users.
+
+### Overview
+
+Restated from above:
+   
+   **Setting**: The device is on the ground of a home area.
+
+   **Players**: One (messy) person
+   
+   **Activity**: When there is an item on the floor that is not supposed to be on the ground (boxes, clothes, purses), the device (that looks like a mouse) will roll up to the item, squeak, and light up. This will remind the player to clean up the item.
+   
+   **Goals**: To keep the player's house clean!
+
+### Storyboards
