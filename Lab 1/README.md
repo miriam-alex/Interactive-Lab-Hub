@@ -175,6 +175,8 @@ If you run into technical issues with this tool, you can also use a light switch
 
 \*\***Give us feedback on Tinkerbelle.**\*\*
 > While the repo itself was easy to set up, the application only appeared to run on my laptop; I recieved a series of errors in my phone's browser (mainly timeout errors) while ensuring I was connected to the correct WiFi network. This was only resolved when I switched to using my partner's hotspot. Previously, I was using WhiteSky-Cornell.
+>
+> Update: this was resolved when switching to eduroam.
 
 ## Part D. Wizard the device
 Take a little time to set up the wizarding set-up that allows for someone to remotely control the device while someone acts with it. Hint: You can use Zoom to record videos, and you can pin someone’s video feed if that is the scene which you want to record. 
