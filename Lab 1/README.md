@@ -259,3 +259,8 @@ Restated from above:
 ### Costuming
 ![Alternative Costumes](Images/alternative-designs.png)
 ![Storyboard for Clean Up Mouse - Team Clean Up](Images/design-final.png)
+
+### Video
+_Clean-up Mouse: The Saga_ is available [here](https://drive.google.com/file/d/1LiOexhPG1Rbydkl2FI7sCpoWQkL3Qo5D/view?usp=sharing).
+
+For more acting, check out my partner's video [TODO FILL THIS OUT]().
