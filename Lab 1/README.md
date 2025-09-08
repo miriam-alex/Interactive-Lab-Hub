@@ -265,7 +265,7 @@ _Clean-up Mouse: The Saga_ is available [here](https://drive.google.com/file/d/1
 
 For more acting, check out my partner's video [here](https://drive.google.com/file/d/1ZUJDF5to_Z9oCYyLvx2AgFOqYwZjWrjN/view?usp=sharing).
 
-Credits for the sound belong to Nintendo! My sources are below: 
+Credits for the sounds belong to Nintendo! My sources are below: 
 - [Title sound](https://www.youtube.com/watch?v=ZTHHFXnbtSU)
 - [Sensor sound](https://www.youtube.com/watch?v=9s9QvDv1N5I)
 - [Ignored sound](https://www.youtube.com/shorts/ChYLXKhu66E)
