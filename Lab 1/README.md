@@ -255,3 +255,7 @@ Restated from above:
 ![Storyboard for Clean Up Mouse - Getting Ignored](Images/sb-mouse-ignored.png)
 ![Storyboard for Clean Up Mouse - Sleep Mode](Images/sb-mouse-dnd.png)
 ![Storyboard for Clean Up Mouse - Team Clean Up](Images/sb-mouse-team-mode.png)
+
+### Costuming
+![Alternative Costumes](Images/alternative-designs.png)
+![Storyboard for Clean Up Mouse - Team Clean Up](Images/design-final.png)
