@@ -241,7 +241,7 @@ In this iteration of the design, I wanted to focus on a deep dive on the **clean
 
 ### Overview
 
-Restated from above:
+_Restated from above_
    
    **Setting**: The device is on the ground of a home area.
 
