@@ -263,4 +263,11 @@ Restated from above:
 ### Video
 _Clean-up Mouse: The Saga_ is available [here](https://drive.google.com/file/d/1LiOexhPG1Rbydkl2FI7sCpoWQkL3Qo5D/view?usp=sharing).
 
-For more acting, check out my partner's video [TODO FILL THIS OUT]().
+For more acting, check out my partner's video [here](https://drive.google.com/file/d/1ZUJDF5to_Z9oCYyLvx2AgFOqYwZjWrjN/view?usp=sharing).
+
+Credits for the sound belong to Nintendo! My sources are below: 
+- [Title sound](https://www.youtube.com/watch?v=ZTHHFXnbtSU)
+- [Sensor sound](https://www.youtube.com/watch?v=9s9QvDv1N5I)
+- [Ignored sound](https://www.youtube.com/shorts/ChYLXKhu66E)
+- [DND sound](https://youtu.be/wde4BoKsQ-Y?si=MA_ZGv9r0eguyYG9&t=185)
+- [Celebration sound](https://www.youtube.com/watch?v=VGGYJ-tSY6Q&list=PLG2oBK08t8JAqwsTVapvoSBpWCWj6jSJ8&index=5)
