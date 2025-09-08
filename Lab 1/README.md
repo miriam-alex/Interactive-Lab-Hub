@@ -237,7 +237,7 @@ Do last week’s assignment again, but this time:
 
 \*\***Document everything here. (Particularly, we would like to see the storyboard and video, although photos of the prototype are also great.)**\*\*
 
-In this iteration of the design, I wanted to focus on a deep dive on the clean-up mouse idea. Specifically, I want to prototype the many interactions that the clean-up mouse could have with its users.
+In this iteration of the design, I wanted to focus on a deep dive on the **clean-up mouse**. Specifically, I aimed to design and prototype the many interactions that the clean-up mouse could have with its users.
 
 ### Overview
 
