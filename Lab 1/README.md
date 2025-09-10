@@ -181,7 +181,7 @@ If you run into technical issues with this tool, you can also use a light switch
 ## Part D. Wizard the device
 Take a little time to set up the wizarding set-up that allows for someone to remotely control the device while someone acts with it. Hint: You can use Zoom to record videos, and you can pin someone’s video feed if that is the scene which you want to record. 
 
-> The set-up video is linked [here](https://drive.google.com/file/d/1xOM_sTJwLktaxBvsDW7go40Q72Tfv4XW/view?usp=sharing).
+\*\***Include your first attempts at recording the set-up video here.**\*\*
 
 Now, change the goal within the same setting, and update the interaction with the paper prototype. 
 
