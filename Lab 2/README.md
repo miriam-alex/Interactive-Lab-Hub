@@ -190,6 +190,10 @@ Pro Tip: Using tools like [code-server](https://coder.com/docs/code-server/lates
 
 ## Part G. 
 ## Sketch and brainstorm further interactions and features you would like for your clock for Part 2.
+![Storyboard for memory clock](images/sb-memory-clock.png)
+![Storyboard for pizza clock](images/sb-pizza-clock.png)
+![Storyboard for image light clock](images/sb-city-light-clock.png)
+![Storyboard for sysphean clock](images/sb-sysphean-clock.png)
 
 
 # Prep for Part 2
