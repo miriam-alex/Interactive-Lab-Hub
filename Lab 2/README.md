@@ -1,5 +1,5 @@
 # Interactive Prototyping: The Clock of Pi
-**NAMES OF COLLABORATORS HERE**
+**Feedback Collaborator: Shreya Kethireddy**
 
 Does it feel like time is moving strangely during this semester?
 
@@ -224,6 +224,8 @@ Please sketch/diagram your clock idea. (Try using a [Verplank digram](http://www
 ## Make a short video of your modified barebones PiClock
 
 \*\*\***Take a video of your PiClock.**\*\*\*
+
+[Pizza clock video here!](https://drive.google.com/file/d/1ymkhSQvZn0hD7Rk60ZyNYE8zkUH40MLn/view?usp=sharing) 
 
 After you edit and work on the scripts for Lab 2, the files should be upload back to your own GitHub repo! You can push to your personal github repo by adding the files here, commiting and pushing.
 
