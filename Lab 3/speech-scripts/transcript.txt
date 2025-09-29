@@ -1,0 +1,110 @@
+################################################################################
+Press Ctrl+C to stop the recording
+################################################################################
+{
+  "partial" : ""
+}
+{
+  "partial" : ""
+}
+{
+  "partial" : ""
+}
+{
+  "partial" : "the"
+}
+{
+  "partial" : "his favorite"
+}
+{
+  "partial" : "his favorite"
+}
+{
+  "partial" : "his favorite number"
+}
+{
+  "partial" : "his favorite number"
+}
+{
+  "partial" : "his favorite number"
+}
+{
+  "partial" : "his favorite number"
+}
+{
+  "partial" : "his favorite number is"
+}
+{
+  "partial" : "his favorite number is"
+}
+{
+  "partial" : "his favorite number is"
+}
+{
+  "partial" : "his favorite number is"
+}
+{
+  "partial" : "his favorite number is twenty"
+}
+{
+  "partial" : "his favorite number is twenty"
+}
+{
+  "partial" : "his favorite number is twenty"
+}
+{
+  "partial" : "his favorite number is twenty"
+}
+{
+  "partial" : "his favorite number is twenty two"
+}
+{
+  "partial" : "his favorite number is twenty two"
+}
+{
+  "partial" : "his favorite number is twenty two"
+}
+{
+  "partial" : "his favorite number is twenty two"
+}
+{
+  "text" : "his favorite number is twenty two"
+}
+{
+  "partial" : ""
+}
+{
+  "partial" : ""
+}
+{
+  "partial" : ""
+}
+{
+  "partial" : ""
+}
+{
+  "partial" : ""
+}
+{
+  "partial" : ""
+}
+{
+  "partial" : ""
+}
+{
+  "partial" : ""
+}
+{
+  "partial" : ""
+}
+{
+  "partial" : ""
+}
+{
+  "partial" : ""
+}
+{
+  "partial" : ""
+}
+
+Done
