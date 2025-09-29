@@ -248,7 +248,7 @@ Write out what you imagine the dialogue to be. Use cards, post-its, or whatever 
 
 > Since the use case of this project is relatively narrow, this process felt straightforward to me. I first imagined the process I go through manually in the morning (namely, gathering my keys, checking the weather, and then assembling an outfit). I then automated this interaction, though I did feel that this initial draft was a little restrictive.
 
-![Interaction flowchart](interaction_dialogue_flowchart.png)
+![Interaction flowchart](interaction_diagram_flowchart.png)
 
 ### Acting out the dialogue
 
@@ -318,6 +318,7 @@ Answer the following:
 ### How could you use your system to create a dataset of interaction? What other sensing modalities would make sense to capture?
 
 \*\**your answer here*\*\*
+
 
 
 
