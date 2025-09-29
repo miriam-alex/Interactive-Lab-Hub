@@ -254,7 +254,7 @@ Since the use case of this project is relatively narrow, this process felt strai
 
 Find a partner, and *without sharing the script with your partner* try out the dialogue you've designed, where you (as the device designer) act as the device you are designing.  Please record this interaction (for example, using Zoom's record feature).
 
-The recorded interaction is linked [here]([interaction_diagram.png](https://drive.google.com/file/d/1WJVCHFZDOf9HbCw9gRurgA3TDscG2uMM/view?usp=sharing).
+The recorded interaction is linked [here](https://drive.google.com/file/d/1WJVCHFZDOf9HbCw9gRurgA3TDscG2uMM/view?usp=sharing).
 
 \*\***Describe if the dialogue seemed different than what you imagined when it was acted out, and how.**\*\*
 
@@ -318,6 +318,7 @@ Answer the following:
 ### How could you use your system to create a dataset of interaction? What other sensing modalities would make sense to capture?
 
 \*\**your answer here*\*\*
+
 
 
 
