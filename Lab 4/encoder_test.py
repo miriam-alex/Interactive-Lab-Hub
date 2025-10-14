@@ -4,7 +4,7 @@
 """I2C rotary encoder simple test example."""
 
 import board
-from adafruit_seesaw import seesaw, rotaryio, digitalio
+from adafruit_seesaw import seesaw, rotaryio, digitalio, neopixel
 
 # For use with the STEMMA connector on QT Py RP2040
 # import busio
@@ -24,6 +24,10 @@ button_held = False
 
 encoder = rotaryio.IncrementalEncoder(seesaw)
 last_position = None
+
+pixel = neopixel.NeoPixel(seesaw, 6, 1)
+pixel.brightness = 0.5
+pixel.fill((128, 0, 0))
 
 while True:
 

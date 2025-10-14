@@ -13,9 +13,14 @@
 	This helps ensure your README.md is clear, professional, and uniquely yours!
 </details>
 
----
 
 ## Lab 4 Deliverables
+
+<details>
+<summary> 
+<span style="font-size:1.2em; font-weight:bold;">Deliverables</span>
+</summary>
+
 
 ### Part 1 (Week 1)
 **Submit the following for Part 1:**  
@@ -53,16 +58,19 @@
 	- Reflection on what you learned and next steps
 
 ---
+</details>
 
 ## Lab Overview
-**NAMES OF COLLABORATORS HERE**
-
 
 For lab this week, we focus both on sensing, to bring in new modes of input into your devices, as well as prototyping the physical look and feel of the device. You will think about the physical form the device needs to perform the sensing as well as present the display or feedback about what was sensed. 
 
-## Part 1 Lab Preparation
+<details>
+<summary> 
+<span style="font-size:1.2em; font-weight:bold;">Part 1 Lab Preparation</span>
+</summary>
 
-### Get the latest content:
+### Get the latest content
+
 As always, pull updates from the class Interactive-Lab-Hub to both your Pi and your own GitHub repo. As we discussed in the class, there are 2 ways you can do so:
 
 
@@ -100,7 +108,12 @@ Option 3: (preferred) use the Github.com interface to update the changes.
 
 (We do offer shared cutting board, cutting tools, and markers on the class cart during the lab, so do not worry if you don't have them!)
 
-## Deliverables \& Submission for Lab 4
+</details>
+
+<details>
+<summary> 
+<span style="font-size:1.2em; font-weight:bold;">Deliverables & Submission for Lab 4</span>
+</summary>
 
 The deliverables for this lab are, writings, sketches, photos, and videos that show what your prototype:
 * "Looks like": shows how the device should look, feel, sit, weigh, etc.
@@ -111,6 +124,8 @@ For submission, the readme.md page for this lab should be edited to include the 
 * Upload any materials that explain what you did, into your lab 4 repository, and link them in your lab 4 readme.md.
 * Link your Lab 4 readme.md in your main Interactive-Lab-Hub readme.md. 
 * Labs are due on Mondays, make sure to submit your Lab 4 readme.md to Canvas.
+
+</details>
 
 
 ## Lab Overview
@@ -130,7 +145,12 @@ F) [Record the interaction](#part-f)
 
 ## The Report (Part 1: A-D, Part 2: E-F)
 
-### Quick Start: Python Environment Setup
+<details>
+<summary> 
+<span style="font-size:1.2em; font-weight:bold;">Quick Start: Python Environment Setup</span>
+</summary>
+
+
 
 1. **Create and activate a virtual environment in Lab 4:**
 	```bash
@@ -148,8 +168,15 @@ F) [Record the interaction](#part-f)
 	```
 	If you see "Hello blinka!", your setup is correct. If not, follow the troubleshooting steps in the file or ask for help.
 
+</details>
+
 ### Part A
+---
 ### Capacitive Sensing, a.k.a. Human-Twizzler Interaction 
+
+<details>
+<summary> <strong>Setup</strong> </summary>
+
 
 We want to introduce you to the [capacitive sensor](https://learn.adafruit.com/adafruit-mpr121-gator) in your kit. It's one of the most flexible input devices we are able to provide. At boot, it measures the capacitance on each of the 12 contacts. Whenever that capacitance changes, it considers it a user touch. You can attach any conductive material. In your kit, you have copper tape that will work well, but don't limit yourself! In the example below, we use Twizzlers--you should pick your own objects.
 
@@ -168,11 +195,19 @@ These Twizzlers are connected to pads 6 and 10. When you run the code and touch 
 Twizzler 10 touched!
 Twizzler 6 touched!
 ```
+</details>
 
-### Part B
-### More sensors
+
+![alt text](images/setup-capactive-1.JPG)
+![alt text](images/setup-capacitive-2.JPG)
+> Here, I chose to touch the sensor with my hands and my keys (connected via an alligator clips). I initially had trouble setting it up due to connectivity issues, but switching the wire used helped.
+
+### Part B: More sensors
+---
 
 #### Light/Proximity/Gesture sensor (APDS-9960)
+<details>
+<summary> <strong>Setup</strong> </summary>
 
 We here want you to get to know this awesome sensor [Adafruit APDS-9960](https://www.adafruit.com/product/3595). It is capable of sensing proximity, light (also RGB), and gesture! 
  
@@ -191,8 +226,22 @@ Connect it to your pi with Qwiic connector and try running the three example scr
 ```
 
 You can go the the [Adafruit GitHub Page](https://github.com/adafruit/Adafruit_CircuitPython_APDS9960) to see more examples for this sensor!
+</details>
+
+![alt text](images/setup-proximity-1.JPG)
+![alt text](images/setup-proximity-2.JPG)
+> Here, I tested the proximity detection with my finger. The initial value of 4 was due to my phone being directly in front of it to capture the image.
+
+![alt text](images/setup-color-1.JPG)
+> I tested the color detection with my speaker, verifying the output with an online RBG to visual color detector.
+
+![alt text](images/setup-gesture-1.JPG)
+> I tested this again with my finger. Initially, I had some trouble figuring out what a gesture entailed, so I used [this video](https://www.youtube.com/watch?v=kUtxEMzZX6U&t=13s) as a reference.
+
 
 #### Rotary Encoder 
+<details>
+<summary> <strong>Setup</strong> </summary>
 
 A rotary encoder is an electro-mechanical device that converts the angular position to analog or digital output signals. The [Adafruit rotary encoder](https://www.adafruit.com/product/4991#technical-details) we ordered for you came with separate breakout board and encoder itself, that is, they will need to be soldered if you have not yet done so! We will be bringing the soldering station to the lab class for you to use, also, you can go to the MakerLAB to do the soldering off-class. Here is some [guidance on soldering](https://learn.adafruit.com/adafruit-guide-excellent-soldering/preparation) from Adafruit. When you first solder, get someone who has done it before (ideally in the MakerLAB environment). It is a good idea to review this material beforehand so you know what to look at.
 
@@ -210,9 +259,22 @@ Connect it to your pi with Qwiic connector and try running the example script, i
 ```
 
 You can go to the [Adafruit Learn Page](https://learn.adafruit.com/adafruit-i2c-qt-rotary-encoder/python-circuitpython) to learn more about the sensor! The sensor actually comes with an LED (neo pixel): Can you try lighting it up? 
+</details>
+
+![alt text](images/setup-rotary-1.JPG)
+![alt text](images/setup-rotary-2.JPG)
+![alt text](images/setup-rotary-3.JPG)
+> For the LED light to appear, the following code was added to the file:
+```
+from adafruit_seesaw import seesaw, rotaryio, digitalio, neopixel 
+pixel = neopixel.NeoPixel(seesaw, 6, 1)
+pixel.brightness = 0.5
+pixel.fill((128, 0, 0))
+```
 
 #### Joystick 
-
+<details>
+<summary> <strong>Setup</strong> </summary>
 
 A [joystick](https://www.sparkfun.com/products/15168) can be used to sense and report the input of the stick for it pivoting angle or direction. It also comes with a button input!
 
@@ -227,9 +289,14 @@ Connect it to your pi with Qwiic connector and try running the example script to
 ```
 
 You can go to the [SparkFun GitHub Page](https://github.com/sparkfun/Qwiic_Joystick_Py) to learn more about the sensor!
+</details>
+
+![alt text](images/setup-joystick-1.JPG)
+> I tested controlling the joystick and examined the changing X and Y values.
 
 #### Distance Sensor
-
+<details>
+<summary> <strong>Setup</strong> </summary>
 
 Earlier we have asked you to play with the proximity sensor, which is able to sense objects within a short distance. Here, we offer [Sparkfun Proximity Sensor Breakout](https://www.sparkfun.com/products/15177), With the ability to detect objects up to 20cm away.
 
@@ -245,6 +312,11 @@ Connect it to your pi with Qwiic connector and try running the example script to
 ```
 
 You can go to the [SparkFun GitHub Page](https://github.com/sparkfun/Qwiic_Proximity_Py) to learn more about the sensor and see other examples
+</details>
+
+![alt text](images/setup-distance-1.JPG)
+![alt text](images/setup-distance-2.JPG)
+> I tested this similarily to the proximity sensor.
 
 ### Part C
 ### Physical considerations for sensing
