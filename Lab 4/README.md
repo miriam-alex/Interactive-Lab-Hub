@@ -197,9 +197,7 @@ Twizzler 6 touched!
 ```
 </details>
 
-
-![alt text](images/setup-capactive-1.JPG)
-![alt text](images/setup-capacitive-2.JPG)
+<img src="images/setup-capactive-1.JPG" width="400"/>  <img src="images/setup-capacitive-2.JPG" width="400"/> 
 > Here, I chose to touch the sensor with my hands and my keys (connected via an alligator clips). I initially had trouble setting it up due to connectivity issues, but switching the wire used helped.
 
 ### Part B: More sensors
@@ -228,14 +226,15 @@ Connect it to your pi with Qwiic connector and try running the three example scr
 You can go the the [Adafruit GitHub Page](https://github.com/adafruit/Adafruit_CircuitPython_APDS9960) to see more examples for this sensor!
 </details>
 
-![alt text](images/setup-proximity-1.JPG)
-![alt text](images/setup-proximity-2.JPG)
+<img src="images/setup-proximity-1.JPG" width="400"/> <img src="images/setup-proximity-2.JPG"  width="400"/>
 > Here, I tested the proximity detection with my finger. The initial value of 4 was due to my phone being directly in front of it to capture the image.
 
-![alt text](images/setup-color-1.JPG)
+<img src="images/setup-color-1.JPG" width="400"/>
+
 > I tested the color detection with my speaker, verifying the output with an online RBG to visual color detector.
 
-![alt text](images/setup-gesture-1.JPG)
+<img src="images/setup-gesture-1.JPG" width="400"/>
+
 > I tested this again with my finger. Initially, I had some trouble figuring out what a gesture entailed, so I used [this video](https://www.youtube.com/watch?v=kUtxEMzZX6U&t=13s) as a reference.
 
 
@@ -261,10 +260,9 @@ Connect it to your pi with Qwiic connector and try running the example script, i
 You can go to the [Adafruit Learn Page](https://learn.adafruit.com/adafruit-i2c-qt-rotary-encoder/python-circuitpython) to learn more about the sensor! The sensor actually comes with an LED (neo pixel): Can you try lighting it up? 
 </details>
 
-![alt text](images/setup-rotary-1.JPG)
-![alt text](images/setup-rotary-2.JPG)
-![alt text](images/setup-rotary-3.JPG)
-> For the LED light to appear, the following code was added to the file:
+<img src="images/setup-rotary-1.JPG" width="400"/> <img src="images/setup-rotary-2.JPG" width="400"/> <img src="images/setup-rotary-3.JPG" width="400"/>
+
+> For the LED light to appear, the following code was added to the file (from the Adafruit Learn Page):
 ```
 from adafruit_seesaw import seesaw, rotaryio, digitalio, neopixel 
 pixel = neopixel.NeoPixel(seesaw, 6, 1)
@@ -291,7 +289,7 @@ Connect it to your pi with Qwiic connector and try running the example script to
 You can go to the [SparkFun GitHub Page](https://github.com/sparkfun/Qwiic_Joystick_Py) to learn more about the sensor!
 </details>
 
-![alt text](images/setup-joystick-1.JPG)
+<img src="images/setup-rotary-1.JPG" width="400"/>
 > I tested controlling the joystick and examined the changing X and Y values.
 
 #### Distance Sensor
@@ -314,8 +312,7 @@ Connect it to your pi with Qwiic connector and try running the example script to
 You can go to the [SparkFun GitHub Page](https://github.com/sparkfun/Qwiic_Proximity_Py) to learn more about the sensor and see other examples
 </details>
 
-![alt text](images/setup-distance-1.JPG)
-![alt text](images/setup-distance-2.JPG)
+<img src="images/setup-distance-1.JPG" width="400"/> <img src="images/setup-distance-2.JPG" width="400"/> 
 > I tested this similarily to the proximity sensor.
 
 ### Part C
