@@ -1,1 +1,5 @@
 /.venv
+ollama/
+venv/
+__pycache__/
+*.pyc
