@@ -324,10 +324,11 @@ Usually, sensors need to be positioned in specific locations or orientations to 
 
 **\*\*\*Draw 5 sketches of different ways you might use your sensor, and how the larger device needs to be shaped in order to make the sensor useful.\*\*\***
 
+<img src="images/part_1_interaction_storyboards.png"/>
+
 **\*\*\*What are some things these sketches raise as questions? What do you need to physically prototype to understand how to anwer those questions?\*\*\***
 
-**\*\*\*Pick one of these designs to prototype.\*\*\***
-
+Primarily, I want to see how people prefer to orient their hands. For example, for the theremin example, do people prefer to sit or stand when using the instrument. How does this change the orientation of their hands? For the cooking example, would the device be directly in their way (and therefore more of a hassle than help)?
 
 ### Part D
 ### Physical considerations for displaying information and housing parts
@@ -374,23 +375,30 @@ Think about how you want to present the information about what your sensor is se
 
 **\*\*\*What are some things these sketches raise as questions? What do you need to physically prototype to understand how to anwer those questions?\*\*\***
 
+Similar to above, here were my core questions:
+- Where do users place the prototype? Do they place it on their laps, on the table, or somewhere else?
+- Are the gestures intuitive?
+- Are the volume controls intutitive?
+- How often does the user look at the screen of the device?
+
 **\*\*\*Pick one of these display designs to integrate into your prototype.\*\*\***
 
 **\*\*\*Explain the rationale for the design.\*\*\*** (e.g. Does it need to be a certain size or form or need to be able to be seen from a certain distance?)
 
-Build a cardboard prototype of your design.
+I picked this design under the impression that users would situate the device in their laps while sitting. Therefore, I had to raise the gesture part of it such the user could gesture in front of their faces rather than on top of the device, which makes the feeling more intuitive. However, for volume, I left it facing upwards, similar how to how a conductor at an orchestra would raise their hands to display dynamics. 
 
+Build a cardboard prototype of your design.
 
 **\*\*\*Document your rough prototype.\*\*\***
 
+<img src="images/cardboard_prototype.JPG"/>
+_Rationale for design is above._
 
 # LAB PART 2
 
 ### Part 2
 
 Following exploration and reflection from Part 1, complete the "looks like," "works like" and "acts like" prototypes for your design, reiterated below.
-
-
 
 ### Part E
 
