@@ -588,6 +588,8 @@ First, my prototyping focused on making a glove that was easy to wear and contro
 
 **Prototype 1** focused on the use of rubber gloves and copper tape. I wanted a note to play when a specific finger touched my thumb. I first measured where my fingers naturally touched one another when making a simple "pinching" gesture with each pair of fingers and my thumb; in that location, I put copper tape around that area of the glove. Then, I added more copper tape that attached the "band" around my glove to copper wires, which were clamped around the different nodes of the capacitive touch sensor. 
 
+<img src="images/IMG_3660.PNG" width="400"/>
+
 [▶️ Watch prototype 1's demo here!](https://drive.google.com/file/d/1--7-WIJG8gl5tX2yGTwjvpAEANCF9pjE/view?usp=sharing)
 
 This worked initially, but after [▶️ testing with a user](https://drive.google.com/file/d/1uccVM8VJR7RCzdxLUeFJmrC8dCKWZ-yI/view?usp=sharing), there were a few shortcomings I noticed.
@@ -598,6 +600,8 @@ This worked initially, but after [▶️ testing with a user](https://drive.goog
 - Additionally, in this iteration, I didn't add volume control, so the notes lacked some expressiveness. 
 
 **Prototype 2** added an additional innovation: the use of aluminum wires, courtesy of the maker space. Rather than wrapping the aluminum directly around the glove, I fashioned an aluminum ring (which could be adjusted for anyone's finger size) by wrapping aluminum wire around each finger and wrapped a bit of copper tape around each ring (for increased conductivity). Additionally, the alligator clips could be more securely clamped to the ring, so this eliminated one of the previous concerns. 
+
+<img src="images/IMG_3661.JPG" width="400"/>
 
 [▶️ Watch prototype 2's demo here!](https://drive.google.com/file/d/1qzFKY1mun2KmX-x8w3JspG7SoXAArfH6/view?usp=sharing)
 
