@@ -333,7 +333,8 @@ Primarily, I want to see how people prefer to orient their hands. For example, f
 ### Part D
 ### Physical considerations for displaying information and housing parts
 
-
+<details>
+<summary> Section description </summary>
 
 Here is a Pi with a paper faceplate on it to turn it into a display interface:
 
@@ -370,8 +371,12 @@ Here is an example:
 <img src="https://github.com/FAR-Lab/Developing-and-Designing-Interactive-Devices/blob/2020Fall/images/horoscope.png?raw=true"  width="250"/>
 
 Think about how you want to present the information about what your sensor is sensing! Design a paper display for your project that communicates the state of the Pi and a sensor. Ideally you should design it so that you can slide the Pi out to work on the circuit or programming, and then slide it back in and reattach a few wires to be back in operation.
+
+</details>
  
 **\*\*\*Sketch 5 designs for how you would physically position your display and any buttons or knobs needed to interact with it.\*\*\***
+
+<img src="images/part_1_device_designs.png"/>
 
 **\*\*\*What are some things these sketches raise as questions? What do you need to physically prototype to understand how to anwer those questions?\*\*\***
 
@@ -380,19 +385,21 @@ Similar to above, here were my core questions:
 - Are the gestures intuitive?
 - Are the volume controls intutitive?
 - How often does the user look at the screen of the device?
+- How many notes does the user want?
 
 **\*\*\*Pick one of these display designs to integrate into your prototype.\*\*\***
 
 **\*\*\*Explain the rationale for the design.\*\*\*** (e.g. Does it need to be a certain size or form or need to be able to be seen from a certain distance?)
 
-I picked this design under the impression that users would situate the device in their laps while sitting. Therefore, I had to raise the gesture part of it such the user could gesture in front of their faces rather than on top of the device, which makes the feeling more intuitive. However, for volume, I left it facing upwards, similar how to how a conductor at an orchestra would raise their hands to display dynamics. 
+I picked this design under the impression that users would situate the device in their laps while sitting. Therefore, I had to raise the gesture part of it such the user could gesture in front of their faces rather than on top of the device, which makes the feeling more intuitive. However, for volume, I left it facing upwards, similar how to how a conductor at an orchestra would raise their hands to display dynamics. While this is not the most creative of designs, it fits the paradigm on how musical devices currently look. However, given more sensors, I would like to explore the glove option (and the capacitive sensors).
 
 Build a cardboard prototype of your design.
 
 **\*\*\*Document your rough prototype.\*\*\***
 
 <img src="images/cardboard_prototype.JPG"/>
-_Rationale for design is above._
+
+This rough prototype is prototyped primarily with sticky notes to show where specific components of the Pi would go, e.g. display and sensors. 
 
 # LAB PART 2
 
