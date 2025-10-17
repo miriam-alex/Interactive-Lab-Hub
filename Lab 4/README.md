@@ -580,11 +580,24 @@ Document all the prototypes and iterations you have designed and worked on! Agai
 * "Works like": shows what the device can do
 * "Acts like": shows how a person would interact with the device
 
-Documentation for reproducibility:
-
 First, the Pi must be connected to a Bluetooth speaker. Assuming the pairing from `prep.md` in Lab 3 has been completed, pair your speaker with `sudo bluetoothctl` and the speaker should connect.
 
 Then, activate the venv created above with `source .venv/bin/activate`
 
+First, my prototyping focused on making a glove that was easy to wear and control. My goal was initially to have four notes playing.
 
+**Prototype 1** focused on the use of rubber gloves and copper tape. I wanted a note to play when a specific finger touched my thumb. I first measured where my fingers naturally touched one another when making a simple "pinching" gesture with each pair of fingers and my thumb; in that location, I put copper tape around that area of the glove. Then, I added more copper tape that attached the "band" around my glove to copper wires, which were clamped around the different nodes of the capacitive touch sensor. 
+
+[▶️ Watch prototype 1's demo here!](https://drive.google.com/file/d/1--7-WIJG8gl5tX2yGTwjvpAEANCF9pjE/view?usp=sharing)
+
+This worked initially, but after [▶️ testing with a user](https://drive.google.com/file/d/1uccVM8VJR7RCzdxLUeFJmrC8dCKWZ-yI/view?usp=sharing), there were a few shortcomings I noticed.
+- The pinching gesture worked alright for me, but did not generalize well to the hands of other people since everyone has different finger/thumb lengths, leading to a slightly different pinch gesture.
+- Relatedly, it was difficult to always hit the correct spot of the thumb; ideally, we would want to make it as simple as possible to activate the sound.
+- Since the connection of the copper wire to the alligator clips was so fragile, the user was concerned about breaking the device.
+- When the copper bands were right next to one another, they sometimes would go off when the user rested their fingers together.
+- Additionally, in this iteration, I didn't add volume control, so the notes lacked some expressiveness. 
+
+**Prototype 2** added an additional innovation: the use of aluminum wires, courtesy of the maker space. Rather than wrapping the aluminum directly around the glove, I fashioned an aluminum ring (which could be adjusted for anyone's finger size) by wrapping aluminum wire around each finger and wrapped a bit of copper tape around each ring (for increased conductivity). Additionally, the alligator clips could be more securely clamped to the ring, so this eliminated one of the previous concerns. 
+
+[▶️ Watch prototype 2's demo here!](https://drive.google.com/file/d/1qzFKY1mun2KmX-x8w3JspG7SoXAArfH6/view?usp=sharing)
 
