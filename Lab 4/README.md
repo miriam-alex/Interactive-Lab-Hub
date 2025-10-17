@@ -580,3 +580,11 @@ Document all the prototypes and iterations you have designed and worked on! Agai
 * "Works like": shows what the device can do
 * "Acts like": shows how a person would interact with the device
 
+Documentation for reproducibility:
+
+First, the Pi must be connected to a Bluetooth speaker. Assuming the pairing from `prep.md` in Lab 3 has been completed, pair your speaker with `sudo bluetoothctl` and the speaker should connect.
+
+Then, activate the venv created above with `source .venv/bin/activate`
+
+
+
