@@ -599,9 +599,15 @@ This worked initially, but after [▶️ testing with a user](https://drive.goog
 - When the copper bands were right next to one another, they sometimes would go off when the user rested their fingers together.
 - Additionally, in this iteration, I didn't add volume control, so the notes lacked some expressiveness. 
 
-**Prototype 2** added an additional innovation: the use of aluminum wires, courtesy of the maker space. Rather than wrapping the aluminum directly around the glove, I fashioned an aluminum ring (which could be adjusted for anyone's finger size) by wrapping aluminum wire around each finger and wrapped a bit of copper tape around each ring (for increased conductivity). Additionally, the alligator clips could be more securely clamped to the ring, so this eliminated one of the previous concerns. 
+**Prototype 2** added an additional innovation: the use of aluminum wires, courtesy of the maker space. Rather than wrapping the aluminum directly around the glove, I fashioned an aluminum ring (which could be adjusted for anyone's finger size) by wrapping aluminum wire around each finger and wrapped a bit of copper tape around each ring (for increased conductivity). Additionally, the alligator clips could be more securely clamped to the ring, so this eliminated one of the previous concerns. Additionally, in the other hand, I attached a distance sensor, which served as a "volume control" mechanism.
 
 <img src="images/IMG_3661.JPG" width="400"/>
 
 [▶️ Watch prototype 2's demo here!](https://drive.google.com/file/d/1qzFKY1mun2KmX-x8w3JspG7SoXAArfH6/view?usp=sharing)
+
+All code is located in `part_2_demo.py`.
+
+I tested this with another person (not filmed) while prototyping. The movement seemed to be more intuitive and the aluminum rings were more adjustable for the user, though the control of the volume sensor and sensitivity of the rings themselves were still a bit finicky. 
+
+With a little more time, I'd ideally make coverings for the sensors so they would be less exposed. Additionally, copper rings rather than aluminum rings might be better for conductivity, but I did not have access to copper wire at this time.
 
