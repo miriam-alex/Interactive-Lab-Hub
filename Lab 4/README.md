@@ -403,6 +403,9 @@ This rough prototype is prototyped primarily with sticky notes to show where spe
 
 # LAB PART 2
 
+<details>
+	<summary><strong>Part 2 Instructions</strong></summary>
+
 ### Part 2
 
 Following exploration and reflection from Part 1, complete the "looks like," "works like" and "acts like" prototypes for your design, reiterated below.
@@ -570,10 +573,12 @@ A servo motor is a rotary actuator that allows for precise control of angular po
 
 ---
 
+</details>
 
 ### Part F
 
 ### Record
+
 
 Document all the prototypes and iterations you have designed and worked on! Again, deliverables for this lab are writings, sketches, photos, and videos that show what your prototype:
 * "Looks like": shows how the device should look, feel, sit, weigh, etc.
