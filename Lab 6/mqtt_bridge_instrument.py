@@ -21,59 +21,62 @@ mqtt_client = None
 def on_connect(client, userdata, flags, rc):
     """MQTT connected"""
     if rc == 0:
-        print(f'✓ MQTT connected to {MQTT_BROKER}:{MQTT_PORT}')
+        print(f'[OK] MQTT connected to {MQTT_BROKER}:{MQTT_PORT}')
         client.subscribe(MQTT_TOPIC)
-        print(f'✓ Subscribed to {MQTT_TOPIC}')
+        print(f'[OK] Subscribed to {MQTT_TOPIC}')
     else:
-        print(f'✗ MQTT connection failed: {rc}')
+        print(f'[ERR] MQTT connection failed: {rc}')
 
 
 def on_message(client, userdata, msg):
-    """MQTT message received - forward to WebSocket"""
+    """MQTT message received - forward instrument events to WebSocket"""
     try:
         data = json.loads(msg.payload.decode('UTF-8'))
-        socketio = userdata['socketio']
-        pixels = userdata['pixels']
-        
+        socketio = userdata.get('socketio')
+        instruments = userdata.get('instruments', {})
+
+        # Only handle kitchen instrument messages (instrument_publisher.py)
+        if 'utensil' not in data:
+            print(f'[DBG] Ignored MQTT message on {msg.topic} (no utensil field)')
+            return
+
         mac = data.get('mac')
-        r = int(data.get('r', 0))
-        g = int(data.get('g', 0))
-        b = int(data.get('b', 0))
-        
-        # Validate
-        r = max(0, min(255, r))
-        g = max(0, min(255, g))
-        b = max(0, min(255, b))
-        
-        # Check if new pixel
-        is_new = mac not in pixels
-        
+        ip = data.get('ip')
+        utensil = data.get('utensil')
+        timestamp = data.get('timestamp')
+
+        # Check if new instrument
+        is_new = mac not in instruments
+
+        from datetime import datetime
         if is_new:
-            # Import here to avoid circular dependency
-            from datetime import datetime
-            # Assign next available position
-            position = len(pixels)
-            pixels[mac] = {
-                'color': [r, g, b],
-                'position': position,
-                'last_update': datetime.now()
+            instruments[mac] = {
+                'utensil': utensil,
+                'ip': ip,
+                'last_update': datetime.now(),
+                'timestamp': timestamp
             }
-            print(f'✓ MQTT pixel: {mac[:17]} at position {position} RGB({r},{g},{b})')
+            print(f'[OK] MQTT instrument: {mac[:17]} utensil={utensil}')
         else:
-            from datetime import datetime
-            # Update existing pixel
-            pixels[mac]['color'] = [r, g, b]
-            pixels[mac]['last_update'] = datetime.now()
-        
-        # Broadcast to all clients
-        socketio.emit('pixel_update', {
-            'mac': mac,
-            'color': [r, g, b],
-            'position': pixels[mac]['position'],
-            'is_new': is_new,
-            'total': len(pixels)
-        }, namespace='/')
-        
+            instruments[mac]['utensil'] = utensil
+            instruments[mac]['ip'] = ip
+            instruments[mac]['timestamp'] = timestamp
+            instruments[mac]['last_update'] = datetime.now()
+
+        # Broadcast instrument event to web clients
+        if socketio:
+            socketio.emit('instrument_event', {
+                'mac': mac,
+                'ip': ip,
+                'utensil': utensil,
+                'timestamp': timestamp,
+                'is_new': is_new,
+                'total': len(instruments)
+            }, namespace='/')
+
+        # Save back instruments into userdata
+        userdata['instruments'] = instruments
+
     except Exception as e:
         print(f'Error processing MQTT message: {e}')
 
@@ -90,10 +93,11 @@ def start_mqtt_bridge(socketio_instance, pixels_dict):
         if MQTT_PORT == 8883:
             mqtt_client.tls_set(cert_reqs=ssl.CERT_NONE)
         
-        mqtt_client.username_pw_set(MQTT_USERNAME, MQTT_PASSWORD)
-        mqtt_client.on_connect = on_connect
-        mqtt_client.on_message = on_message
-        mqtt_client.user_data_set({'socketio': socketio_instance, 'pixels': pixels_dict})
+    mqtt_client.username_pw_set(MQTT_USERNAME, MQTT_PASSWORD)
+    mqtt_client.on_connect = on_connect
+    mqtt_client.on_message = on_message
+    # Provide instruments dict in userdata so bridge and app can share state
+    mqtt_client.user_data_set({'socketio': socketio_instance, 'instruments': pixels_dict})
         
         mqtt_client.connect(MQTT_BROKER, port=MQTT_PORT, keepalive=60)
         mqtt_client.loop_start()
@@ -102,7 +106,7 @@ def start_mqtt_bridge(socketio_instance, pixels_dict):
         return True
         
     except Exception as e:
-        print(f'⚠️  MQTT bridge failed: {e}')
+        print(f'[WARN]  MQTT bridge failed: {e}')
         print('    Server will run with WebSocket only')
         return False
 
