@@ -22,6 +22,61 @@ Build interactive systems where **multiple devices communicate over a network** 
 
 ---
 
+## HELLO TEAM!
+
+My apologies for making you decipher this shoddily written code. Here are some instructions to make it a little easier.
+
+`cd ‘Lab 6’`
+
+`source .venv/bin/activate`
+
+`python3 mqtt_viewer.py`
+
+Here, the script should say something like:
+
+```
+MQTT connected to farlab.infosci.cornell.edu:1883
+Subscribed to IDD/kitchen-instrument
+```
+
+Then, open VNC viewer.
+Navigate to `templates/kitchen.html`
+Click “Open in Firefox” or another browser
+
+Then, you can connect any extra Pis and run the scripts you made before.
+
+Below is a collection of my thoughts and TODOs for implementing a target system for sensors and utensils in `template > kitchen.html`. 
+Feel free to ignore these (though I do think using some good coding practice might save us some headache when we work on this long term).
+
+1. I think the best approach might be to create a JavaScript interface for each type of target that could include:  
+    - A field to store the schema for the data  
+    - `checkIfInstanceType()` to verify if some data matches this type  
+    - `generateRandomTarget()` to produce a random target  
+    - `checkRandomTarget()` to confirm if some data meets the target  
+    - `name()` to return a readable name for the target  
+
+ 2. Then, we' implement the interface for all the sensors/utensils we have so far:  
+    - Distance  
+    - Capacitance  
+    - Rotary  
+
+ These would live in `template > kitchen.html` (for now).  
+
+3. We probably need a method to set and reset the target every X seconds.  
+    - Should take an object that conforms to the interface.  
+    - Should call `generateRandomTarget()` for all connected devices at each interval.  
+
+4. We should make some updates to `checkUtensilTarget()` in `kitchen.html`
+    - Checks what utensil it is
+    - Run `checkIfInstanceType()` for the corresponding utensil
+    - Returns true/false
+
+5. Updating global status and aggregating everything
+    - There’s already an `updateGlobalStatus()` method, but it’s kind of messy
+    - Should update this to checkUtensilTarget for all connected utensils
+    - If all utensil targets are connected, then we update the global status element at the top of the script to reflect that!
+
+
 ## Part A: MQTT Messaging
 
 MQTT = lightweight messaging for IoT. Publish/subscribe model with central broker.
