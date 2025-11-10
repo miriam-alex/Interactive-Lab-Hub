@@ -19,6 +19,17 @@
 <body>
 <h2>Kitchen Dashboard</h2>
 <div id="utensils"></div>
+<div id="global-status" style="
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    font-size: 1.2em;
+    padding: 0.5rem;
+    background: #222;
+    color: #eee;
+">hi</div>
 
 <script>
     const socket = io();
@@ -40,6 +51,51 @@
         console.log(payload)
         renderUtensils();
     });
+
+    function checkUtensilTarget(utensil) {
+        console.log('checkUtensilTarget')
+        if (utensil == 'pan') { // for testing
+            console.log('asdjkh')
+            const payload = latestData[utensil];
+            // const config = targetConfig[utensil];
+            // if (!payload || config.currentTarget === null) return false;
+
+            const value = payload.data.value;
+            // const div = document.querySelector(`#utensils .utensil[data-utensil="${utensil}"]`);
+            // if (!div) return false;
+            console.log("helo")
+
+            // if (value >= config.min && value <= config.max) {
+            if (value >= 2 && value <= 50) {
+                console.log("in right range")
+                // div.style.background = '#339933'; // green
+                // div.querySelector('.message')?.remove();
+                return true;
+            } else {
+                // div.style.background = '#222'; // default
+                // if (!div.querySelector('.message')) {
+                //     const msg = document.createElement('div');
+                //     msg.className = 'message';
+                //     msg.style.color = '#ff4444';
+                //     msg.textContent = `Missed target!`;
+                //     // div.appendChild(msg);
+                // }
+                return false;
+            }
+        }
+    }
+
+    function updateGlobalStatus() {
+        const allInRange = Object.keys(latestData).every(utensil => checkUtensilTarget(utensil));
+        const statusDiv = document.getElementById('global-status');
+        if (allInRange) {
+            statusDiv.textContent = "✅ All utensils are within range!";
+            statusDiv.style.background = "#336633";
+        } else {
+            statusDiv.textContent = "";
+            statusDiv.style.background = "#222";
+        }
+    }
         
     function renderUtensils(data) {
         const container = document.getElementById("utensils");
@@ -48,6 +104,7 @@
             if (payload != null){
                 const div = document.createElement("div");
                 div.className = "utensil updated";
+                div.id = utensil
                 div.innerHTML = `
                 <div class="utensil-name">${utensil}</div>
                 <div class="utensil-data">${JSON.stringify(payload.data, null, 2)}</div>
@@ -56,8 +113,10 @@
                 container.appendChild(div);
                 // remove highlight after 300ms
                 setTimeout(() => div.classList.remove("updated"), 300);
+                checkUtensilTarget(utensil);
             }
         }
+        updateGlobalStatus();
     }
 </script>
 </body>
