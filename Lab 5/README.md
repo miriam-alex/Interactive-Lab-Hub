@@ -3,8 +3,10 @@
 **COLLABORATORS:**
 [Shreya Kethi Reddy](https://github.com/littleredpolkadot/Interactive-Lab-Hub/tree/Fall2025/Lab%205), [Amanda Lu](https://github.com/amandazlu/Interactive-Lab-Hub/blob/Fall2025/Lab%205/README.md), [Ying Yu Chen](https://github.com/chenyingyu-main/Interactive-Lab-Hub/tree/Fall2025/Lab%205)  
 
-Main Repository is Shreya Kethi Reddy's ^
+Main Repository is Ying-Yu Chen's! ^
 
+<details>
+<summary>Assignment details</summary>
 
 For lab this week, we focus on creating interactive systems that can detect and respond to events or stimuli in the environment of the Pi, like the Boat Detector we mentioned in lecture. 
 Your **observant device** could, for example, count items, find objects, recognize an event or continuously monitor a room.
@@ -201,3 +203,5 @@ During the lecture, we mentioned questions to help characterize a material:
 Following exploration and reflection from Part 1, finish building your interactive system, and demonstrate it in use with a video.
 
 **\*\*\*Include a short video demonstrating the finished result.\*\*\***
+
+</details>
