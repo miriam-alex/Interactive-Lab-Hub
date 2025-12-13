@@ -1,298 +1,212 @@
 # Distributed Interaction
 
-**NAMES OF COLLABORATORS HERE**
+Amanda Lu, Shreya Kethi Reddy, Miriam Alex, Ying Yu Chen (main repo)
 
-For submission, replace this section with your documentation!
+## Running the System
 
----
-
-## Prep
-
-1. Pull the new changes
-2. Read: [The Presence Table](https://dl.acm.org/doi/10.1145/1935701.1935800) ([video](https://vimeo.com/15932020))
-
-## Overview
-
-Build interactive systems where **multiple devices communicate over a network** using MQTT messaging. Work in teams of 3+ with Raspberry Pis.
-
-**Parts:**
-- A: Learn MQTT messaging
-- B: Try collaborative pixel grid demo  
-- C: Build your own distributed system
-
----
-
-## HELLO TEAM!
-
-My apologies for making you decipher this shoddily written code. Here are some instructions to make it a little easier.
-
-`cd ‘Lab 6’`
-
-`source .venv/bin/activate`
-
-`python3 mqtt_viewer.py`
-
-Here, the script should say something like:
-
-```
-MQTT connected to farlab.infosci.cornell.edu:1883
-Subscribed to IDD/kitchen-instrument
-```
-
-Then, open VNC viewer.
-Navigate to `templates/kitchen.html`
-Click “Open in Firefox” or another browser
-
-Then, you can connect any extra Pis and run the scripts you made before.
-
-Below is a collection of my thoughts and TODOs for implementing a target system for sensors and utensils in `template > kitchen.html`. 
-Feel free to ignore these (though I do think using some good coding practice might save us some headache when we work on this long term).
-
-1. I think the best approach might be to create a JavaScript interface for each type of target that could include:  
-    - A field to store the schema for the data  
-    - `checkIfInstanceType()` to verify if some data matches this type  
-    - `generateRandomTarget()` to produce a random target  
-    - `checkRandomTarget()` to confirm if some data meets the target  
-    - `name()` to return a readable name for the target  
-
- 2. Then, we' implement the interface for all the sensors/utensils we have so far:  
-    - Distance  
-    - Capacitance  
-    - Rotary  
-
- These would live in `template > kitchen.html` (for now).  
-
-3. We probably need a method to set and reset the target every X seconds.  
-    - Should take an object that conforms to the interface.  
-    - Should call `generateRandomTarget()` for all connected devices at each interval.  
-
-4. We should make some updates to `checkUtensilTarget()` in `kitchen.html`
-    - Checks what utensil it is
-    - Run `checkIfInstanceType()` for the corresponding utensil
-    - Returns true/false
-
-5. Updating global status and aggregating everything
-    - There’s already an `updateGlobalStatus()` method, but it’s kind of messy
-    - Should update this to checkUtensilTarget for all connected utensils
-    - If all utensil targets are connected, then we update the global status element at the top of the script to reflect that!
-
-
-## Part A: MQTT Messaging
-
-MQTT = lightweight messaging for IoT. Publish/subscribe model with central broker.
-
-**Concepts:**
-- **Broker**: `farlab.infosci.cornell.edu:1883`
-- **Topic**: Like `IDD/bedroom/temperature` (use `#` wildcard)
-- **Publish/Subscribe**: Send and receive messages
-
-**Install MQTT tools on your Pi:**
+**Server (on laptop):**
 ```bash
-sudo apt-get update
-sudo apt-get install -y mosquitto-clients
-```
-
-**Test it:**
-
-**Subscribe to messages (listener):**
-```bash
-mosquitto_sub -h farlab.infosci.cornell.edu -p 1883 -t 'IDD/#' -u idd -P 'device@theFarm'
-```
-
-**Publish a message (sender):**
-```bash
-mosquitto_pub -h farlab.infosci.cornell.edu -p 1883 -t 'IDD/test/yourname' -m 'Hello!' -u idd -P 'device@theFarm'
-```
-
-> **💡 Tips:**
-> - Replace `yourname` with your actual name in the topic
-> - Use single quotes around the password: `'device@theFarm'`
-
-**🔧 Debug Tool:** View all MQTT messages in real-time at `http://farlab.infosci.cornell.edu:5001`
-
-![MQTT Explorer showing messages](imgs/MQTT-explorer.png)
-
-**💡 Brainstorm 5 ideas for messaging between devices**
-
----
-
-## Part B: Collaborative Pixel Grid
-
-Each Pi = one pixel, controlled by RGB sensor, displayed in real-time grid.
-
-**Architecture:** `Pi (sensor) → MQTT → Server → Web Browser`
-
-**Setup:**
-
-1. **Sensor**
-
-#### Light/Proximity/Gesture sensor (APDS-9960)
-We use this sensor [Adafruit APDS-9960](https://www.adafruit.com/product/3595) for this exmaple to detect light (also RGB)
- 
-<img src="https://cdn-shop.adafruit.com/970x728/3595-06.jpg" width=200>
-
-Connect it to your pi with Qwiic connector
-
-
-<img src="imgs/IMG_0270.jpg" height="200" />
-We need to use the screen to display the color detection, so we need to stop the running piscreen.service to make your screen available again
-
-```bash
-# stop the screen service
-sudo systemctl stop piscreen.service
-```
-
-if you want to restart the screen service
-```bash
-# start the screen service
-sudo systemctl start piscreen.service
-```
- 
-2. **Server** (one person on laptop):
-```bash
-cd "Lab 6"  
-source .venv/bin/activate
-pip install -r requirements-server.txt
-python app.py
-```
-
-2. **View in browser:**
-   - Grid: `http://farlab.infosci.cornell.edu:5000`
-   - Controller: `http://farlab.infosci.cornell.edu:5000/controller`
-
-3. **Pi publisher** (everyone on their Pi):
-```bash
-# First time setup - create virtual environment
 cd "Lab 6"
-python -m venv .venv
 source .venv/bin/activate
-pip install -r requirements-pi.txt
+python3 mqtt_viewer.py
+```
+Then open browser to `http://localhost:5001`
 
-# Run the publisher
-python pixel_grid_publisher.py
+**Raspberry Pi (each device):**
+```bash
+cd "Lab 6"
+source .venv/bin/activate
+python3 instrument_publisher.py
 ```
 
-Hold colored objects near sensor to change your pixel!
+### Requirements
 
-![Pixel grid with two devices](imgs/two-devices-grid.png)
+**Server:** `requirements-server.txt`
+- Flask, Flask-SocketIO
+- paho-mqtt
 
-**📸 Include: Screenshot of grid + photo of your Pi setup**
+**Raspberry Pi:** `requirements-pi.txt`
+- Adafruit sensor libraries
+- paho-mqtt
+- Pillow (for display)
 
----
+### MQTT Broker Details
 
-## Part C: Make Your Own
+- **Host:** farlab.infosci.cornell.edu
+- **Port:** 1883
+- **Username:** idd
+- **Password:** device@theFarm
+- **Topics:** IDD/kitchen-instrument
 
-**Requirements:**
-- 3+ people, 3+ Pis
-- Each Pi contributes sensor input via MQTT
-- Meaningful or fun interaction
+## Description
+Our distributed kitchen instrument system creates a networked environment where multiple Raspberry Pis equipped with different sensors act as "smart kitchen utensils." Each Pi publishes sensor data (such as distance, capacitance, or rotary encoder readings) to an MQTT broker, which then forwards this data to a central web dashboard. The dashboard displays real-time data from all connected devices and can coordinate actions across multiple devices simultaneously.
 
-**Ideas:**
+Users interact with physical sensors attached to Raspberry Pis (representing kitchen utensils like cutting boards, pans, and mixing bowls). As they manipulate these sensors, they see immediate feedback on a shared web dashboard. The system can detect when multiple "utensils" are being used simultaneously and coordinate responses across all connected devices, creating a shared, distributed experience.
 
-**Sensor Fortune Teller**
-- Each Pi sends 0-255 from different sensor
-- Server generates fortunes from combined values
+## Architecture Diagram
 
-**Frankenstories**
-- Sensor events → story elements (not text!)
-- Red = danger, gesture up = climbed, distance <10cm = suddenly
+_Note: Created this architectural diagram with Claude Sonnet_
 
-**Distributed Instrument**
-- Each Pi = one musical parameter
-- Only works together
+```
+┌─────────────────────────────────────────────────────────────────┐
+│                        DISTRIBUTED SYSTEM                         │
+└─────────────────────────────────────────────────────────────────┘
 
-**Others:** Games, presence display, mood ring
+INPUT LAYER (Raspberry Pis)
+┌────────────────┐  ┌────────────────┐  ┌────────────────┐
+│  Raspberry Pi  │  │  Raspberry Pi  │  │  Raspberry Pi  │
+│   (Device 1)   │  │   (Device 2)   │  │   (Device 3)   │
+├────────────────┤  ├────────────────┤  ├────────────────┤
+│  APDS-9960     │  │  Distance      │  │  Capacitive    │
+│  Color Sensor  │  │  Sensor        │  │  Touch Sensor  │
+│                │  │                │  │                │
+│  MiniPiTFT     │  │  Rotary        │  │  Display       │
+│  Display       │  │  Encoder       │  │                │
+└───────┬────────┘  └───────┬────────┘  └───────┬────────┘
+        │                   │                   │
+        │ Publishes to      │ Publishes to      │ Publishes to
+        │ MQTT Topic        │ MQTT Topic        │ MQTT Topic
+        └───────────────────┴───────────────────┘
+                            ↓
 
-### Deliverables
+COMMUNICATION LAYER
+┌─────────────────────────────────────────────────────────────┐
+│            MQTT Broker (farlab.infosci.cornell.edu)          │
+│                   Topic: IDD/kitchen-instrument              │
+│                                                              │
+│  • Receives messages from all Raspberry Pis                 │
+│  • Routes messages to subscribed clients                    │
+│  • Maintains lightweight pub/sub architecture               │
+└──────────────────────────┬──────────────────────────────────┘
+                           ↓
 
-Replace this README with your documentation:
+COMPUTATION LAYER
+┌─────────────────────────────────────────────────────────────┐
+│              Flask/SocketIO Server (Python)                  │
+│                                                              │
+│  • mqtt_viewer.py - Subscribes to MQTT topics               │
+│  • Processes incoming sensor data                           │
+│  • Maintains state of all connected devices                 │
+│  • Broadcasts updates via WebSocket                         │
+│  • Coordinates multi-device interactions                    │
+└──────────────────────────┬──────────────────────────────────┘
+                           ↓
 
-**1. Project Description**
-- What does it do? Why interesting? User experience?
+OUTPUT LAYER
+┌─────────────────────────────────────────────────────────────┐
+│                    Web Browser Dashboard                     │
+│                    (kitchen.html interface)                  │
+│                                                              │
+│  • Real-time display of all utensil data                    │
+│  • WebSocket connection for live updates                    │
+│  • Visual feedback when utensils are in use                 │
+│  • Global status indicator for coordinated actions          │
+└─────────────────────────────────────────────────────────────┘
 
-**2. Architecture Diagram**
-- Hardware, connections, data flow
-- Label input/computation/output
+DATA FLOW:
+Sensor → Pi (JSON) → MQTT Publish → Broker → Server Subscribe 
+→ Server Process → WebSocket → Browser Display
+```
 
-**3. Build Documentation**
+**Key Components:**
+- **Input:** Physical sensors connected to Raspberry Pis
+- **Computation:** MQTT broker routes messages; Flask server processes and coordinates
+- **Output:** Web dashboard displays real-time data and coordination status
+
+## Build Documentation
 - Photos of each Pi + sensors
 - MQTT topics used
 - Code snippets with explanations
 
-**4. User Testing**
-- **Test with 2+ people NOT on your team**
-- Photos/video of use
-- What did they think before trying?
-- What surprised them?
-- What would they change?
+## 3. Build Documentation
 
-**5. Reflection**
-- What worked well?
-- Challenges with distributed interaction?
-- How did sensor events work?
-- What would you improve?
+### Hardware Setup
 
----
+**Sensors:**
+- Color/Proximity Sensor
+- Rotary encoder
+- Capacitive touch sensor
 
-## Code Files
+![Cutting Board](https://raw.githubusercontent.com/chenyingyu-main/Interactive-Lab-Hub/refs/heads/Fall2025/Lab%206/imgs/cutting.jpg)
+![Pan](https://raw.githubusercontent.com/chenyingyu-main/Interactive-Lab-Hub/refs/heads/Fall2025/Lab%206/imgs/pan.jpg)
+![Mixing Bowl](https://raw.githubusercontent.com/chenyingyu-main/Interactive-Lab-Hub/refs/heads/Fall2025/Lab%206/imgs/mixing.jpg)
 
-**Server files:**
-- `app.py` - Pixel grid server (Flask + WebSocket + MQTT)
-- `mqtt_viewer.py` - MQTT message viewer for debugging
-- `mqtt_bridge.py` - MQTT → WebSocket bridge
-- `requirements-server.txt` - Server dependencies
+### MQTT Topics Used
+**Primary Topic:** `IDD/kitchen-instrument`
 
-**Pi files:**
-- `pixel_grid_publisher.py` - Example (RGB sensor → MQTT)
-- `requirements-pi.txt` - Pi dependencies
+**Message Format (JSON):**
+```json
+{
+  "mac": "b8:27:eb:xx:xx:xx",
+  "ip": "192.168.1.100",
+  "utensil": "cutting_board",
+  "data": {
+    "sensor_type": "distance",
+    "value": 42,
+    "unit": "cm"
+  },
+  "timestamp": 1702483200
+}
+```
+**Key Code Snippet:**
+```python
+# Get device identifiers
+mac_address = get_mac_address()
+ip_address = get_ip_address()
 
-**Web interface:**
-- `templates/grid.html` - Pixel grid display
-- `templates/controller.html` - Color picker
-- `templates/mqtt_viewer.html` - Message viewer
+# Setup MQTT client
+client = mqtt.Client(str(uuid.uuid1()))
+client.username_pw_set(MQTT_USERNAME, MQTT_PASSWORD)
+client.connect(MQTT_BROKER, port=MQTT_PORT, keepalive=60)
 
----
-
-## Debugging Tools
-
-**MQTT Message Viewer:** `http://farlab.infosci.cornell.edu:5001`
-- See all MQTT messages in real-time
-- View topics and payloads
-- Helpful for debugging your own projects
-
-**Command line:**
-```bash
-# See all IDD messages
-mosquitto_sub -h farlab.infosci.cornell.edu -p 1883 -t "IDD/#" -u idd -P "device@theFarm"
+# Main loop - read sensor and publish
+while True:
+    # Read sensor data (e.g., distance, color, capacitance)
+    sensor_value = read_sensor()
+    
+    # Create JSON payload
+    mqtt_payload = json.dumps({
+        'mac': mac_address,
+        'ip': ip_address,
+        'utensil': 'cutting_board',  # or 'pan', 'mixing_bowl'
+        'data': {
+            'sensor_type': 'distance',
+            'value': sensor_value
+        },
+        'timestamp': int(time.time())
+    })
+    
+    # Publish to MQTT
+    client.publish(MQTT_TOPIC, mqtt_payload)
+    time.sleep(0.1)
 ```
 
+**Explanation:** Each Pi identifies itself with a unique MAC address and publishes sensor readings as JSON messages. The system uses a consistent message format so the server can process data from any utensil type.
+
+## User Testing
+
+Testers: Marianne Arriola, Deviki Veerareddy
+
+Before trying, the testers could tell that it was a multi-player game pretty easily, however they did not realize it was a cooking game until we told them
+The cutting board especially surprised one of our testers felt as if the separate tapping of the rod did not mirror the knife cutting (they didn't know what to do intuitively)
+Both of our testers liked how the sounds played while doing the actions, however wished there was some way to play multiple sounds when multiple actions were being done (ie. chopping & mixing
+One tester suggested a great application/extension would be to compose music using each as a instrument
+Noticed that the pan distance sensor worked most of the time, but at times was slightly buggy
+After revealing the intent of the final project, our testers agreed that a visual UI would be very helpful for timing and synchronization
+
+## Reflection
+
+- The accuracy and speed of data streamed to server wokred well (sensor inputs were detected very well) and the sounds played were also pretty accurate in terms of timing with use and non-use of the sensors
+- We did face some challenges in getting all three pis to co-ordinate and switch using the shared speaker system in terms of order of usage of the different sensors due to timing and sensistivity issues as well as audio lengths
+- Each pi was assigned a specific cooking action (distance sensor -> pan, joystick -> mixing bowl, capacitator -> bowl) and all of these devices published messages to the same topic which was monitored for the speaker to know what sound to currently play
+- We hope to imporve the sensor interactions to be more complex as we are using this as a baseline initiial step for our final project
+- In addition we hope to improve the multiple sounds playing at once by playing sounds that are stacked audios of the two/three cooking utensils that are in use
+- Another aspect we hope to improve on is making the physical cutting board more realistic mimicking a single lever-style chopping motion (up-to-down) rather than requiring repeated taps across the cutting board
+- We are hoping to take this project in the direction of detecting synchronized timings and gamifying the experience we have now which would allow for a more interesting user interaction
+
+
 ---
-
-## Troubleshooting
-
-**MQTT:** Broker `farlab.infosci.cornell.edu:1883`, user `idd`, pass `device@theFarm`
-
-**Sensor:** Check `i2cdetect -y 1`, APDS-9960 at `0x39`
-
-**Grid:** Verify server running, check MQTT in console, test with web controller
-
-**Pi venv:** Make sure to activate: `source .venv/bin/activate`
-
-
----
-
-## Submission Checklist
-
-Before submitting:
-- [ ] Delete prep/instructions above
-- [ ] Add YOUR project documentation
-- [ ] Include photos/videos/diagrams  
-- [ ] Document user testing with non-team members
-- [ ] Add reflection on learnings
-- [ ] List team names at top
-
 **Your README = story of what YOU built!**
-
 ---
 
 Resources: [MQTT Guide](https://www.hivemq.com/mqtt-essentials/) | [Paho Python](https://www.eclipse.org/paho/index.php?page=clients/python/docs/index.php) | [Flask-SocketIO](https://flask-socketio.readthedocs.io/)
